@@ -1,0 +1,34 @@
+
+
+<div class="row">
+  <div class="col-sm-9">
+    <div>
+      <h2>Add Todo List</h2>
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" [(ngModel)]="text" class="form-control" required name="text" ngModel>
+      </div>
+      <div class="form-group">
+        <label>Select user:</label>
+        <br/>
+        
+
+       
+          <select  aria-label="ngSelected demo">
+              <option  id="choose" ng-selected="selected">Choose a user</option>
+            <option name = "user" [value]="user" *ngFor="let user of users">{{user.name}}</option>
+          </select>
+        
+
+        
+      </div>
+
+      <button (click)="onSubmitAddTask()" type="submit" class="btn btn-success">Save</button>
+
+    
+    </div>
+
+  </div>
+
+
+</div>
